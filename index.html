@@ -3,12 +3,18 @@
 <body>
 
 <h1>Songs</h1>
-<button onclick="openSong()">Amazing Grace</button>
+<button onclick="openSong('Amazing Grace')">Amazing Grace</button>
+<button onclick="openSong('How Firm A Foundation')">How Firm A Foundation</button>
 
 <script>
 
-function openSong() {
-    document.body.innerHTML = "<h1>Amazing Grace</h1>";
+let songs = [ 
+    "Amazing Grace",
+    "How Firm A Foundation"
+];
+
+function openSong(song) {
+    document.body.innerHTML = "<h1>" + song + "</h1>";
     let newText = document.createElement("p");
     newText.textContent = "Amazing Grace how sweet the sound. That saved a wretch like me. I once was lost but now I'm found. Was blind, but now I see.";
     document.body.appendChild(newText);   
